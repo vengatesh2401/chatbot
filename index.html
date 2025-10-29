@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainingTrains Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="logo">
+                    <h2>TrainingTrains</h2>
+                    <span>AI Assistant</span>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    Online
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="avatar">TT</div>
+                <div class="message-content">
+                    <div class="message-text">
+                        Hello! I'm your TrainingTrains assistant. I can help you with:
+                        • Course information
+                        • Pricing details
+                        • Enrollment process
+                        • Schedule and timing
+                        • Contact information
+                    </div>
+                    <div class="message-time" id="initialTime"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div class="suggested-questions">
+                <button class="suggestion-btn" onclick="sendSuggestion(this)">What courses do you offer?</button>
+                <button class="suggestion-btn" onclick="sendSuggestion(this)">Python programming course</button>
+                <button class="suggestion-btn" onclick="sendSuggestion(this)">Course pricing information</button>
+                <button class="suggestion-btn" onclick="sendSuggestion(this)">How to enroll in a course?</button>
+            </div>
+            <div class="input-group">
+                <input type="text" id="messageInput" placeholder="Ask about our training programs..." maxlength="500">
+                <button id="sendButton" title="Send message">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot-engine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
